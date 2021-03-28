@@ -6,14 +6,12 @@ const resolvers = {
     Query: {
             users: async () => {
                 return User.find()
-                    .select('-__v -password')
-                    .populate('savedBooks');
+                    .select('-__v -password');
             },
             me: async (parent, args, context) => {
                 if (context.user) {
                     const userData = await User.findOne({ _id: context.user._id})
-                        .select('-__v -password')
-                        .populate('savedBooks');
+                        .select('-__v -password');
                     return userData
                 }
                 throw new AuthenticationError('Cannot find a user with this id!');
@@ -52,7 +50,7 @@ const resolvers = {
             };
             throw new AuthenticationError('Must be logged in to use this feature');
         },
-        deleteBook: async (parent, {bookId}, context) => {
+        removeBook: async (parent, {bookId}, context) => {
             if (context.user) {
                 const updatedUser = await User.findByIdAndUpdate(
                     {_id: context.user._id },
