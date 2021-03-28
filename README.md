@@ -6,12 +6,26 @@ A book search engine that allows users to save book searches.
 
 ## Table of Contents
 - [Description](#description)
-- [Technologies](#technologies)
 - [Usage](#usage)
+- [Technologies](#technologies)
 - [Installation](#installation)
 - [License](#license)
 - [Contributing](#contributing)
 - [Author](#author)
+
+## Usage
+
+The deployed application can be viewed [here](https://dcharney-book-search.herokuapp.com/). Users can use the search feature to load data from the google books search api. Users have the option to sign up or login to save searches to their profile. 
+
+![gif of searching for book](./assets/21-mern-homework-demo-01.gif)
+
+A logged in user can save books to their account using the "Save This Book!" button.
+
+![gif of searching for book](./assets/21-mern-homework-demo-02.gif)
+
+From the 'See Your Books' tab, users can view their saved books and remove any searches they no longer desire using the 'Delete This Book!" button.
+
+![gif of searching for book](./assets/21-mern-homework-demo-03.gif)
 
 ## Technologies
 
@@ -31,20 +45,6 @@ This web app was built using:
 - jwt-decode
 - json web token
 - if-env
-
-## Usage
-
-The deployed application can be viewed [here](https://dcharney-book-search.herokuapp.com/). Users can use the search feature to load data from the google books search api. Users have the option to sign up or login to save searches to their profile. 
-
-![gif of searching for book](./assets/21-mern-homework-demo-01.gif)
-
-A logged in user can save books to their account using the "Save This Book!" button.
-
-![gif of searching for book](./assets/21-mern-homework-demo-02.gif)
-
-From the 'See Your Books' tab, users can view their saved books and remove any searches they no longer desire using the 'Delete This Book!" button.
-
-![gif of searching for book](./assets/21-mern-homework-demo-03.gif)
 
 ## Installation
 
