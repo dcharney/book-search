@@ -11,11 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 const { typeDefs, resolvers } = require('./schemas');
-// const { authMiddleware } = require('./utils/auth');
+const { authMiddleware } = require('./utils/auth');
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    // context: authMiddleware
+    context: authMiddleware
 });
 server.applyMiddleware({ app });
 
